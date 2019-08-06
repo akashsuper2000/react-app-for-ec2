@@ -26,7 +26,7 @@ app.post('/api', (req, res) => {
    res.writeHead(200, { "Content-Type": "text/html" });
     
     var date = new Date(req.body.date);
-    var today = new Date();
+    var today = new Date(); 
     var days = req.body.days;
     var country=req.body.country;
     var states=req.body.states;
@@ -37,20 +37,16 @@ app.post('/api', (req, res) => {
    console.log(states);
 
     if(date<=today){
-      res.write("Enter a date after today");
+      res.write("Enter a date after today!");
     }
-      else if (country ==="")
-      { 
-        res.write("Please select a country");
-      }
-      else if(states ==="")
+    else if(days>30 || days<=0)
       {
-        res.write("Please select a state");
+        res.write("Days must be less than 30 and above 0!");
       }
     else {
-      console.log(days + " " + date+ " " + country+ " " + states+ " Submitted Succesfully!");
-      res.write("Successfully submitted");
-    con.query('insert into details (date, days, country, states) values (?,?,?,?)',[date,days,country,states]);
+      console.log(days + " " + date+ " " + country+ " " + states+ " Submitted succesfully!");
+      res.write("Submitted succesfully!");
+    con.query('insert into details (date, days, country, states) values (?,?,?,?)',[req.body.date.toString(),days,country,states]);
     }
     res.end();
 });

@@ -3,20 +3,13 @@ import './bootstrap.css';
 import './App.css';
 
 class App extends Component {
-
-
   
-  handleSubmit=(e)=>{
-    e.preventDefault();
-    var date = new Date(document.getElementsByName('date')[0].value);
-    var today = new Date();
-    var diff = Math.abs(date-today);
-    diff = Math.ceil(diff/(1000*60*60*24));
-    document.getElementsByName('days')[0].value = diff.toString();
+  handleSubmit(e){
+    e.preventDefault();    
   };
   
 render() {
-      document.title='React Form'
+      document.title='Form'
       return (
           <div className='Container'>
 
@@ -27,7 +20,7 @@ render() {
             
             <div className='FormGroup'>
             <span className='Subheads'>Date </span>
-            <input className='Boxes' type="date" required name='date' onChange={this.handleSubmit}/>
+            <input className='Boxes' type="date" required name='date'/>
             </div>
 
             <div className='FormGroup'>
@@ -43,16 +36,16 @@ render() {
 
             <div className='FormGroup'>
             <span className='Subheads'>Number of days</span>
-            <input className='Boxes' name='days' type="text" readOnly/>
+            <input className='Boxes' name='days' type="text" required/>
             </div>
 
             <div className='FormGroup'>
             <span className='Subheads'>State</span>
             <select className='Boxes' name='states'>
-            <option default>TN</option>
-            <option>AP</option>
-            <option>MP</option>
-            <option>HP</option>
+            <option default>Alberta</option>
+            <option>Britain</option>
+            <option>California</option>
+            <option>Ontario</option>
             <option>Delhi</option>
             </select>
             </div>
