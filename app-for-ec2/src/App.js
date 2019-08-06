@@ -3,10 +3,16 @@ import './bootstrap.css';
 import './App.css';
 
 class App extends Component {
+
+
   
-  handleSubmit(e){
+  handleSubmit=(e)=>{
     e.preventDefault();
-    
+    var date = new Date(document.getElementsByName('date')[0].value);
+    var today = new Date();
+    var diff = Math.abs(date-today);
+    diff = Math.ceil(diff/(1000*60*60*24));
+    document.getElementsByName('days')[0].value = diff.toString();
   };
   
 render() {
@@ -21,7 +27,7 @@ render() {
             
             <div className='FormGroup'>
             <span className='Subheads'>Date </span>
-            <input className='Boxes' type="date" required name='date'/>
+            <input className='Boxes' type="date" required name='date' onChange={this.handleSubmit}/>
             </div>
 
             <div className='FormGroup'>
@@ -37,7 +43,7 @@ render() {
 
             <div className='FormGroup'>
             <span className='Subheads'>Number of days</span>
-            <input className='Boxes' name='days' type="text" required/>
+            <input className='Boxes' name='days' type="text" readOnly/>
             </div>
 
             <div className='FormGroup'>
