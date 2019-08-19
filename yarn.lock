@@ -411,7 +411,7 @@ fd-slicer@1.1.0:
   dependencies:
     pend "~1.2.0"
 
-file-type@^12.1.0:
+file-type@^12.2.0:
   version "12.2.0"
   resolved "https://registry.yarnpkg.com/file-type/-/file-type-12.2.0.tgz#bc4bce830e38a96a0ecfea0e2dfcee2855ed1380"
   integrity sha512-bkDBeH5doAqP69axEO69OviLlWbrZ10Ne2OPHaxBgG+fyT0w/2zfMzJz21SPwq5Iq0aN70q7RN3KRcdUY427Mg==
