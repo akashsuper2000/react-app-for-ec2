@@ -51,8 +51,8 @@
     // eslint-disable-next-line
     if(this.state.filename!='')
   data.append( 'profileImage', this.state.filename, this.state.filename.name );
-  console.log("Uploading image!");
-  axios.post( 'http://3.92.49.19:5000/img', data, {
+  console.log("UPLOADING IMAGE");
+  axios.post( 'http://localhost:5000/img', data, {
       headers: {
        'accept': 'application/json',
        'Accept-Language': 'en-US,en;q=0.8',
@@ -91,7 +91,7 @@
   event.preventDefault();
 
 
-  fetch('http://3.92.49.19:5000/',{
+  fetch('http://localhost:5000/',{
   method:'post',
   headers:{'Content-Type':'application/json'},
   body:JSON.stringify({
