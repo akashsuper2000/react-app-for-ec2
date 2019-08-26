@@ -17,10 +17,10 @@ app.use(cors());
 var mysql = require('mysql');
  
 const s3 = new aws.S3({
- accessKeyId: 'ASIASNVVKT7MMUT56JOP',
- secretAccessKey: 'TpkAXmGVGTu94fIb4E70oSapNiPH3UOnXQIPnRYk',
- sessionToken: 'FQoGZXIvYXdzEKv//////////wEaDC2WkTUZLbRTR70nKCKWAu3p5n/lclZUAkNYjOvkZm5bDCJIObxZf65bSjmCygxMSkxhSEJ+XYpT72bwUZgwXtvWSD/P0dui9reaB6aNtFmjQkzkXzAsEAXRLqGOz5/tIveYsBLcQQZzxLWMQeM1ZhvDbjYt8+p0oPWVIXXhUFdjiaXmk7f9IvyVWXo1NDYcmn3DQCtamUBv97Mv1E3Ywj5Ljhl69jcacMycVXTgg0ysRRFxiJVxu0mzpRpmMxgsys5hajBQtBy6l0kyzJqPlOZx1ROskaIeiXOwyEzJmuI15dEL+blPbH2/N7KjU0/Ckm1+z0x3UZ7RxeOw+Mg8FWzjocf+mEYOXirNJ+r6B2pcrVDNcZKVklq3Omt353XZpElnZx/YKNvMjusF',
- Bucket: 'akashsuper2000'
+ accessKeyId: '',//fill
+ secretAccessKey: '',//fill
+ sessionToken: '',//fill
+ Bucket: ''//fill
 });
 
 function checkFileType( file, cb ){
@@ -37,7 +37,7 @@ function checkFileType( file, cb ){
 const profileImgUpload = multer({
  storage: multerS3({
   s3: s3,
-  bucket: 'akashsuper2000',
+  bucket: '',//fill
   key: function (req, file, cb) {
    cb(null, path.basename( file.originalname, path.extname( file.originalname ) ) + '-' + Date.now() + path.extname( file.originalname ) )
   }
@@ -81,10 +81,10 @@ app.post('/',(req,res)=>{
 
 
 var con = mysql.createConnection({
-  host: "database-1.cs3qjthqb1zr.us-east-1.rds.amazonaws.com",
-  user:"admin",
-  password:"akash2000",
-  database: "form"
+  host: "",//fill
+  user:"",//fill
+  password:"",//fill
+  database: ""//fill
 });
 con.connect(function(err) {
   if (err) throw err;

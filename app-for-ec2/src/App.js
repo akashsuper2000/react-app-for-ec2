@@ -52,7 +52,7 @@
     if(this.state.filename!='')
   data.append( 'profileImage', this.state.filename, this.state.filename.name );
   console.log("UPLOADING IMAGE");
-  axios.post( 'http://35.172.141.171:5000/img', data, {
+  axios.post( 'http://:5000/img', data, {//fill
       headers: {
        'accept': 'application/json',
        'Accept-Language': 'en-US,en;q=0.8',
@@ -91,7 +91,7 @@
   event.preventDefault();
 
 
-  fetch('http://35.172.141.171:5000/',{
+  fetch('http://:5000/',{//fill
   method:'post',
   headers:{'Content-Type':'application/json'},
   body:JSON.stringify({
