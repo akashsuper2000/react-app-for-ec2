@@ -81,10 +81,10 @@ app.post('/',(req,res)=>{
 
 
 var con = mysql.createConnection({
-  host: "",//fill
-  user:"",//fill
-  password:"",//fill
-  database: ""//fill
+  host: "instance-1.cs3qjthqb1zr.us-east-1.rds.amazonaws.com",//fill
+  user:"admin",//fill
+  password:"akash2000",//fill
+  database: "form"//fill
 });
 con.connect(function(err) {
   if (err) throw err;

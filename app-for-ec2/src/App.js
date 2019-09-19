@@ -30,6 +30,7 @@
       console.log(this.state);
       // eslint-disable-next-line 
       try{
+        // eslint-disable-next-line
             if(this.state.zip!=''){
               var thecity = zipcodes.lookup(parseInt(this.state.zip)).city;
               this.setState({city: thecity});
@@ -52,7 +53,7 @@
     if(this.state.filename!='')
   data.append( 'profileImage', this.state.filename, this.state.filename.name );
   console.log("UPLOADING IMAGE");
-  axios.post( 'http://:5000/img', data, {//fill
+  axios.post( 'http://localhost:5000/img', data, {
       headers: {
        'accept': 'application/json',
        'Accept-Language': 'en-US,en;q=0.8',
@@ -91,7 +92,7 @@
   event.preventDefault();
 
 
-  fetch('http://:5000/',{//fill
+  fetch('http://localhost:5000/',{
   method:'post',
   headers:{'Content-Type':'application/json'},
   body:JSON.stringify({
@@ -150,7 +151,7 @@
 
             <div className='FormGroup'>
             <span className='Subheads'>Upload an image</span>
-            <input className='Boxes' style={{borderWidth: 0}} label='Upload to S3' accept='image/*' name='file' type="file" onChange={this.upload} required/>
+            <input className='Boxes' style={{borderWidth: 0}} label='Upload to S3' accept='image/*' name='file' type="file" onChange={this.upload}/>
             </div>
             
             <input className="btn-lg btn btn-default" type="submit"/>

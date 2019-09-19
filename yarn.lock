@@ -37,6 +37,11 @@ array-flatten@1.1.1:
   resolved "https://registry.yarnpkg.com/array-flatten/-/array-flatten-1.1.1.tgz#9a5f699051b1e7073328f2a008968b64ea2955d2"
   integrity sha1-ml9pkFGx5wczKPKgCJaLZOopVdI=
 
+artyom.js@^1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/artyom.js/-/artyom.js-1.0.6.tgz#c960c7414002e8772af814d3783d63f2e0307755"
+  integrity sha512-dNxvqJy9x2wHVIDu5DVYvdKKrsUBp/9K0FPPXo2YX/8saYBOtLvnoWNHW41NS1Jq+bD4RFqfwhXeLSXgeaDZYQ==
+
 aws-sdk@^2.512.0:
   version "2.512.0"
   resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.512.0.tgz#2480184c37964a224b2db1259aa07231403a09cc"
