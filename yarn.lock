@@ -2,6 +2,11 @@
 # yarn lockfile v1
 
 
+"@types/joi@^14.3.3":
+  version "14.3.4"
+  resolved "https://registry.yarnpkg.com/@types/joi/-/joi-14.3.4.tgz#eed1e14cbb07716079c814138831a520a725a1e0"
+  integrity sha512-1TQNDJvIKlgYXGNIABfgFp9y0FziDpuGrd799Q5RcnsDu+krD+eeW/0Fs5PHARvWWFelOhIG2OPCo6KbadBM4A==
+
 accepts@~1.3.7:
   version "1.3.7"
   resolved "https://registry.yarnpkg.com/accepts/-/accepts-1.3.7.tgz#531bc726517a3b2b41f850021c6cc15eaab507cd"
@@ -361,12 +366,13 @@ express-fileupload@^1.1.5:
   dependencies:
     busboy "^0.2.14"
 
-express-validation@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/express-validation/-/express-validation-1.0.2.tgz#7d589dd3b257c55b3e004665b6c69cb12cc2b142"
-  integrity sha1-fVid07JXxVs+AEZltsacsSzCsUI=
+express-validation@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/express-validation/-/express-validation-2.0.0.tgz#43597b82b6869969e2920c4e143d13f6c865bcb8"
+  integrity sha512-UOUVjUWOrL+ZP/77AftLmAz6T0abmB2dEEddJwrQYSz+6gxJczLu/CEkkhxKZhqfzZTf03mTIJZUQYQvvVCLVQ==
   dependencies:
-    lodash "^4.9.0"
+    "@types/joi" "^14.3.3"
+    lodash "^4.17.15"
 
 express@^4.17.1:
   version "4.17.1"
@@ -649,7 +655,7 @@ locate-path@^3.0.0:
     p-locate "^3.0.0"
     path-exists "^3.0.0"
 
-lodash@^4.17.15, lodash@^4.9.0:
+lodash@^4.17.15:
   version "4.17.15"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
   integrity sha512-8xOcRHvCjnocdS5cpwXQXVzmmh5e5+saE2QGoeQmbKmRS6J3VQppPOIt0MnmE+4xlZoumy0GPG0D0MVIQbNA1A==
