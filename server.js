@@ -1,10 +1,10 @@
 const express= require('express');
 const bodyParser=require('body-parser');
 const cors=require('cors');
-const aws = require( 'aws-sdk' );
-const multerS3 = require( 'multer-s3' );
+const aws = require('aws-sdk');
+const multerS3 = require('multer-s3');
 const multer = require('multer');
-const path = require( 'path' );
+const path = require('path');
 const url = require('url');
 
 
@@ -30,7 +30,7 @@ function checkFileType( file, cb ){
   if( mimetype && extname ){
     return cb( null, true );
   } else {
-    cb( 'Error: Images Only!' );
+    cb( 'Error: Only images are allowed!' );
     }
 }
 
@@ -72,7 +72,6 @@ profileImgUpload( req, res, ( error ) => {
    }
   }
  });
-
 
 });
 
@@ -120,7 +119,6 @@ if(records[0][0]!=null)
 
   });
 }
-
 
 });
 
