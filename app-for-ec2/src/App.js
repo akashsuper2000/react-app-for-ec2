@@ -4,9 +4,7 @@
   import axios from 'axios';
   import zipcodes from 'zipcodes';
 
-
   class App extends Component {
-
 
   constructor(props)
   {
@@ -29,19 +27,18 @@
       console.log(name+" "+value);
       console.log(this.state);
       // eslint-disable-next-line 
-      try{
+      try {
             if(this.state.zip!=''){
               var thecity = zipcodes.lookup(parseInt(this.state.zip)).city;
               this.setState({city: thecity});
             }
-        }catch(e){
+        } catch(e) {
             console.log('error', e);        
         }
       
   }
 
-  printstate=(e)=>
-  {
+  printstate=(e)=> {
     console.log(this.state);
   }
 
@@ -72,12 +69,12 @@
          alert("Select a file!");
          // eslint-disable-next-line
          if(fileName!='Error: No File Selected')
-         alert( 'File Uploaded' );
+         alert( 'File Uploaded!' );
         }
        }
     else {
      // eslint-disable-next-line
-   console.log( 'Please upload file'+ 'red' );
+   console.log( 'Please upload a file'+ 'red' );
     }
     
 
@@ -109,7 +106,7 @@
   this.handleUpload(event);
   }
   else
-    alert("Error inserting. Please follow all restrictions:"+JSON.stringify(this.state.response.error));
+    alert("Error inserting. Please follow all restrictions: "+JSON.stringify(this.state.response.error));
 
   })
 
@@ -155,9 +152,9 @@
             
             <input className="btn-lg btn btn-default" type="submit"/>
         
-        </form>
+          </form>
         </div>
-        </div>
+      </div>
     );
 
   }}
